@@ -1,0 +1,1115 @@
+<!doctype html>
+
+<html lang="id">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Profil Cristiano Ronaldo — CR7 (Premium)</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    
+
+    :root{
+
+      --accent: #dc2626;
+
+      --muted: #94a3b8;
+
+      --glass: rgba(255,255,255,0.06);
+
+      --glass-strong: rgba(255,255,255,0.9);
+
+    }
+
+    html,body{height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+
+    body{background:linear-gradient(180deg,#0f172a 0%, #071028 100%);color:rgb(248,250,252);-webkit-font-smoothing:antialiased}
+
+
+
+    /* Background video */
+
+    #video-bg{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:grayscale(60%) blur(2px) brightness(.45);pointer-events:none}
+
+    #video-overlay{position:fixed;inset:0;background:linear-gradient(180deg,rgba(2,6,23,0.6),rgba(2,6,23,0.45));z-index:1}
+
+
+
+    /* Container */
+
+    .container{position:relative;z-index:10;max-width:1100px;margin:0 auto;padding:36px}
+
+
+
+    /* Card */
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));border-radius:20px;padding:22px;box-shadow:0 10px 30px rgba(2,6,23,0.6);backdrop-filter: blur(6px);border:1px solid rgba(255,255,255,0.04)}
+
+
+
+    /* Headline */
+
+    .hero-title{font-weight:900;letter-spacing: -1px}
+
+    .subtitle{color:var(--muted)}
+
+
+
+    /* Profile image */
+
+    .avatar{width:220px;height:220px;border-radius:999px;overflow:hidden;border:6px solid rgba(255,255,255,0.06);box-shadow:0 10px 30px rgba(220,38,38,0.14)}
+
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+
+
+    /* Stat cards */
+
+    .stat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:18px;text-align:center;border:1px solid rgba(255,255,255,0.03)}
+
+    .stat .num{font-size:28px;font-weight:800;color:var(--accent)}
+
+    .stat .label{color:var(--muted);font-weight:600;margin-top:6px}
+
+
+
+    /* Trophy buttons */
+
+    .trophy{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px;border-radius:14px;background:rgba(255,255,255,0.02);cursor:pointer;transition:transform .28s, box-shadow .28s;border:1px solid rgba(255,255,255,0.03)}
+
+    .trophy:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(2,6,23,0.6)}
+
+
+
+    /* Tabs */
+
+    .tabs button{transition:all .22s ease}
+
+
+
+    /* Modal fallback (kept for accessibility) */
+
+    .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.8));z-index:60;padding:20px}
+
+
+
+    /* Dark/Light toggle */
+
+    .switch{display:inline-flex;align-items:center;gap:8px}
+/* CARD SLIDER (3-per-view) */
+
+.award-slider-container { position: relative; width: 100%; overflow: hidden; }
+.award-slider {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+  will-change: scroll-position;
+  scrollbar-width: none; /* firefox */
+}
+.award-slider::-webkit-scrollbar { display: none; }
+
+/* three cards visible on desktop; 2 on tablet; 1 on mobile */
+.award-item {
+  flex: 0 0 calc((100% / 3) - 12px);
+  height: 320px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+@media (max-width: 1024px) {
+  .award-item { flex: 0 0 calc((100% / 2) - 9px); }
+}
+@media (max-width: 640px) {
+  .award-item { flex: 0 0 100%; height: 420px; }
+}
+
+.award-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease, filter .35s ease;
+  filter: brightness(.82);
+}
+.award-item:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.45); }
+.award-item:hover img { transform: scale(1.04); filter: brightness(1); }
+
+.award-shadow { position:absolute; inset:0; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.6)); pointer-events:none; }
+.award-caption { position:absolute; left:16px; bottom:18px; color:#fff; z-index:3; }
+.award-caption h3 { font-size:18px; font-weight:800; margin:0; }
+.award-caption p { margin:4px 0 0; opacity:.85; }
+
+/* nav buttons */
+.slide-btn {
+  position:absolute; top:50%; transform:translateY(-50%);
+  background: rgba(0,0,0,0.45); color:#fff; border:1px solid rgba(255,255,255,0.06);
+  width:44px; height:44px; border-radius:999px; display:flex; align-items:center; justify-content:center;
+  cursor:pointer; z-index:20; transition: .2s ease;
+}
+.slide-btn:hover { transform:translateY(-50%) scale(1.06); background: rgba(0,0,0,0.6); }
+.slide-btn.left { left: 8px; }
+.slide-btn.right { right: 8px; }
+
+/* small visual helpers */
+.award-slider-container.pause { cursor: grabbing; }
+
+    
+/* =======================
+   ROOT & GLOBAL STYLE
+======================= */
+
+:root {
+  --accent: #dc2626;
+  --muted: #94a3b8;
+  --glass: rgba(255,255,255,0.06);
+  --glass-strong: rgba(255,255,255,0.9);
+}
+
+html, body {
+  height: 100%;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+body {
+  background: linear-gradient(180deg, #0f172a 0%, #071028 100%);
+  color: rgb(248, 250, 252);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+
+/* =======================
+   BACKGROUND VIDEO
+======================= */
+
+#video-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: grayscale(60%) blur(2px) brightness(.45);
+  pointer-events: none;
+}
+
+#video-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(2,6,23,0.6),
+    rgba(2,6,23,0.45)
+  );
+  z-index: 1;
+}
+
+
+/* =======================
+   MAIN CONTAINER
+======================= */
+
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px;
+}
+
+
+/* =======================
+   CARD BASE
+======================= */
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.02)
+  );
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+
+/* =======================
+   PROFILE IMAGE (AVATAR)
+======================= */
+
+.avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 6px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 30px rgba(220,38,38,0.14);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* =======================
+   TITLE & SUBTITLE
+======================= */
+
+.hero-title {
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  color: var(--muted);
+}
+
+
+/* =======================
+   SOCIAL BUTTONS
+======================= */
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  font-size: 14px;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+  transition: .25s ease;
+}
+
+.social-btn:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+
+/* =======================
+   TROPHY GRID
+======================= */
+
+.trophy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+  cursor: pointer;
+  transition: .28s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.trophy:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(2,6,23,0.55);
+}
+
+.trophy-img {
+  width: 64px;
+  height: 64px;
+  padding: 8px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: .25s ease;
+}
+
+.trophy-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.trophy:hover .trophy-img {
+  background: rgba(255,255,255,0.16);
+}
+
+.trophy-title {
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.trophy-sub {
+  font-size: 13px;
+  color: #c6cbd6;
+}
+
+
+/* =======================
+   TABS
+======================= */
+
+.tab-btn,
+.tab-active {
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.tab-btn {
+  background: rgba(255,255,255,0.06);
+}
+
+.tab-active {
+  background: var(--accent);
+}
+
+
+/* =======================
+   SLIDER (10 ITEM PREMIUM)
+======================= */
+
+.award-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.award-slider {
+  display: flex;
+  gap: 18px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.award-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.award-item {
+  flex: 0 0 240px;
+  height: 380px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: .35s ease;
+}
+
+@media (max-width: 1024px) {
+  .award-item { flex: 0 0 220px; height: 360px; }
+}
+@media (max-width: 768px) {
+  .award-item { flex: 0 0 180px; height: 300px; }
+}
+@media (max-width: 520px) {
+  .award-item { flex: 0 0 100%; height: 360px; }
+}
+
+.award-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.85);
+  transition: .3s ease;
+}
+
+.award-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.award-shadow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(0,0,0,0) 40%,
+      rgba(0,0,0,0.55)
+  );
+}
+
+.award-caption {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  color: #fff;
+}
+
+.award-caption h3 {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.award-caption p {
+  font-size: 13px;
+  opacity: .85;
+  margin-top: 2px;
+}
+
+/* PREMIUM ARROWS */
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(
+      180deg,
+      rgba(255,255,255,0.18),
+      rgba(255,255,255,0.05)
+  );
+  border: 1px solid rgba(255,255,255,0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 30;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.45);
+  transition: .28s ease;
+}
+
+/* HOVER EFFECT */
+.slide-arrow:hover {
+  transform: translateY(-50%) scale(1.13);
+  background: linear-gradient(
+      180deg,
+      rgba(255,255,255,0.35),
+      rgba(255,255,255,0.12)
+  );
+  box-shadow: 0 6px 22px rgba(0,0,0,0.55),
+              0 0 12px rgba(255,255,255,0.5);
+}
+
+/* POSISI */
+.slide-arrow.left { left: -25px; }
+.slide-arrow.right { right: -25px; }
+
+
+/* =======================
+   RESPONSIVE AVATAR
+======================= */
+
+@media (max-width: 768px) {
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+  .hero-title {
+    font-size: 34px;
+  }
+}
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+
+  <!-- VIDEO BACKDROP -->
+
+  <video id="video-bg" autoplay loop muted playsinline>
+
+    <source src="vidio/ronaldo.mp4" type="video/mp4">
+
+  </video>
+
+  <div id="video-overlay"></div>
+
+
+
+  <main class="container">
+
+    <header class="card mb-8 flex flex-col md:flex-row items-center gap-6">
+
+      <div class="flex-1 flex items-center gap-6">
+
+        <div class="avatar flex-shrink-0">
+
+          <img src="gambar/cr.avif" alt="Foto Cristiano Ronaldo">
+
+        </div>
+
+  <div>
+
+  <h1 class="hero-title text-4xl md:text-5xl tracking-tight">
+    Cristiano Ronaldo dos Santos Aveiro
+  </h1>
+
+<p class="subtitle mt-1 text-gray-300 font-bold">
+  5 Februari 1985
+</p>
+
+
+  <!-- Deskripsi singkat Ronaldo -->
+  <p class="mt-3 text-gray-300 max-w-xl leading-relaxed">
+    Cristiano Ronaldo bukan hanya pesepak bola, tetapi simbol ambisi tanpa batas. 
+    Dengan kerja keras ekstrem, mental juara, dan rekor gol yang terus bertambah, 
+    CR7 telah menulis sejarah dari Madeira hingga menjadi legenda terbesar 
+    dalam dunia sepak bola modern.
+  </p>
+
+  <div class="mt-4 flex flex-wrap gap-3">
+
+
+    <!-- Instagram -->
+<a href="https://www.instagram.com/cristiano" target="_blank"
+   class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-sm font-semibold hover:bg-white/20 backdrop-blur-sm transition">
+
+  <!-- IG LOGO FULL COLOR -->
+  <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="a" cx="33%" cy="100%" r="90%" fx="33%" fy="100%">
+        <stop offset="0%" stop-color="#FFDD55"/>
+        <stop offset="10%" stop-color="#FFDD55"/>
+        <stop offset="50%" stop-color="#FF543E"/>
+        <stop offset="100%" stop-color="#C837AB"/>
+      </radialGradient>
+    </defs>
+    <rect width="256" height="256" rx="60" fill="url(#a)"/>
+    <circle cx="128" cy="128" r="48" fill="none" stroke="#fff" stroke-width="20"/>
+    <circle cx="182" cy="74" r="16" fill="#fff"/>
+  </svg>
+</a>
+
+
+    <!-- X (Twitter) -->
+    <a href="https://x.com/Cristiano" target="_blank"
+       class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-sm font-semibold hover:bg-white/20 backdrop-blur-sm transition">
+      <!-- X Logo SVG -->
+      <svg width="16" height="16" viewBox="0 0 512 512" fill="#fff">
+        <path d="M389.2 48L231.7 234.5 389.2 
+        464h-81.9L190.8 302.8 91.6 
+        464H32l165.4-198.3L32 48h82l98.9 
+        146.4L344.5 48h44.7z"/>
+      </svg>
+    </a>
+
+  </div>
+
+</div>
+
+
+</div>
+
+    </header>
+
+
+
+    <!-- Tabs & Content -->
+
+    
+
+      <!-- BIO -->
+<!-- TROPHY GRID PREMIUM -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+
+  <!-- TEMPLATE TROPHY -->
+  <div class="trophy group" role="button" tabindex="0" onclick="openTrophyPage('RealMadrid')">
+    <div class="w-16 h-16 rounded-xl overflow-hidden bg-white/10 p-2 
+                flex items-center justify-center group-hover:bg-white/20 transition">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg"
+           class="w-full h-full object-contain" alt="Real Madrid">
+    </div>
+    <div class="font-semibold mt-2 group-hover:text-red-400 transition">Real Madrid</div>
+    <div class="text-sm text-gray-400">15 Gelar Utama</div>
+  </div>
+
+  <div class="trophy group" role="button" tabindex="0" onclick="openTrophyPage('ManUtd')">
+    <div class="w-16 h-16 rounded-xl overflow-hidden bg-white/10 p-2 
+                flex items-center justify-center group-hover:bg-white/20 transition">
+      <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg"
+           class="w-full h-full object-contain" alt="Manchester United">
+    </div>
+    <div class="font-semibold mt-2 group-hover:text-red-400 transition">Manchester United</div>
+    <div class="text-sm text-gray-400">10 Gelar Utama</div>
+  </div>
+
+  <div class="trophy group" role="button" tabindex="0" onclick="openTrophyPage('Juventus')">
+    <div class="w-16 h-16 rounded-xl overflow-hidden bg-white/10 p-2 
+                flex items-center justify-center group-hover:bg-white/20 transition">
+      <img src="gambar/JUVE.png"
+           class="w-full h-full object-contain" alt="Juventus">
+    </div>
+    <div class="font-semibold mt-2 group-hover:text-red-400 transition">Juventus</div>
+    <div class="text-sm text-gray-400">5 Gelar Utama</div>
+  </div>
+
+  <div class="trophy group" role="button" tabindex="0" onclick="openTrophyPage('Portugal')">
+    <div class="w-16 h-16 rounded-xl overflow-hidden bg-white/10 p-2 
+                flex items-center justify-center group-hover:bg-white/20 transition">
+      <img src="gambar/portugal.svg"
+           class="w-full h-full object-contain" alt="Portugal">
+    </div>
+    <div class="font-semibold mt-2 group-hover:text-red-400 transition">Portugal</div>
+    <div class="text-sm text-gray-400">2 Gelar Internasional</div>
+  </div>
+
+  <div class="trophy group" role="button" tabindex="0" onclick="openTrophyPage('SportingCP')">
+    <div class="w-16 h-16 rounded-xl overflow-hidden bg-white/10 p-2 
+                flex items-center justify-center group-hover:bg-white/20 transition">
+      <img src="gambar/sporting.svg"
+           class="w-full h-full object-contain" alt="Sporting CP">
+    </div>
+    <div class="font-semibold mt-2 group-hover:text-red-400 transition">Sporting CP</div>
+    <div class="text-sm text-gray-400">1 Gelar</div>
+  </div>
+
+  <div class="trophy group" role="button" tabindex="0" onclick="openTrophyPage('AlNassr')">
+    <div class="w-16 h-16 rounded-xl overflow-hidden bg-white/10 p-2 
+                flex items-center justify-center group-hover:bg-white/20 transition">
+      <img src="gambar/Al-Nassr_fc.png"
+           class="w-full h-full object-contain" alt="Al-Nassr">
+    </div>
+    <div class="font-semibold mt-2 group-hover:text-red-400 transition">Al-Nassr</div>
+    <div class="text-sm text-gray-400">1 Gelar</div>
+  </div>
+
+</div>
+
+</div> <!-- penutup grid trophy -->
+
+<div class="award-slider-container">
+
+  <!-- PANAH KIRI -->
+  <button class="slide-arrow left" onclick="slidePrev()">❮</button>
+
+  <!-- SLIDER -->
+  <div class="award-slider" id="awardSlider">
+
+    <!-- ITEM 1 -->
+    <div class="award-item">
+      <img src="gambar/balon door.jpg">
+      <div class="award-shadow"></div>
+      <div class="award-caption"><h3>Ballon d'Or</h3><p>5 Penghargaan</p></div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="award-item">
+      <img src="gambar/golden shoe.jpg">
+      <div class="award-shadow"></div>
+      <div class="award-caption"><h3>European Golden Shoe</h3><p>4 Kali</p></div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="award-item">
+      <img src="gambar/fifa the best.webp">
+      <div class="award-shadow"></div>
+      <div class="award-caption"><h3>FIFA The Best</h3><p>2 Kali</p></div>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="award-item">
+      <img src="gambar/ucl.jpg">
+      <div class="award-shadow"></div>
+      <div class="award-caption"><h3>Top Skorer UCL</h3><p>Sepanjang Masa</p></div>
+    </div>
+
+    <!-- ITEM 5 -->
+    <div class="award-item">
+      <img src="gambar/euro.webp">
+      <div class="award-shadow"></div>
+      <div class="award-caption"><h3>Euro 2016</h3><p>Juara Eropa</p></div>
+    </div>
+
+    <!-- ITEM 6 -->
+    <div class="award-item">
+      <img src="gambar/unl.jpg">
+      <div class="award-shadow"></div>
+      <div class="award-caption"><h3>Nations League</h3><p>2 lali</p></div>
+    </div>
+
+    <!-- ITEM 7 -->
+    <div class="award-item">
+      <img src="gambar/puskas.jpg">
+      <div class="award-shadow"></div>
+      <div class="award-caption"><h3>Puskás Award</h3><p>Gol Terbaik Dunia</p></div>
+    </div>
+
+    <!-- ITEM 8 -->
+    <div class="award-item">
+      <img src="gambar/top portugal.jpg">
+      <div class="award-shadow"></div>
+      <div class="award-caption"><h3>Top Skor Portugal</h3><p>Sepanjang Masa</p></div>
+    </div>
+
+    <!-- ITEM 9 -->
+    <div class="award-item">
+      <img src="gambar/sepanjang masa.jpg">
+      <div class="award-shadow"></div>
+      <div class="award-caption"><h3>Top Skor Sepanjang Masa</h3><p>900+ Gol</p></div>
+    </div>
+
+    
+
+  </div>
+
+  <!-- PANAH KANAN -->
+  <button class="slide-arrow right" onclick="slideNext()">❯</button>
+
+</div>
+
+
+
+    <footer class="mt-8 text-center text-sm text-gray-400">
+
+      © CR7-By MULYO ADJI WINOTO--
+
+    </footer>
+
+  </main>
+
+
+
+  <!-- JavaScript: Tab, Theme, dan Open Trophy Page (membuka halaman baru) -->
+
+  <script>
+
+    // Data trofi (dipertahankan dari versi awal)
+
+    const trophyData = {
+
+      'RealMadrid': { name: 'Real Madrid', trophies: ['Liga Champions UEFA (4x)','Piala Dunia Antarklub FIFA (3x)','Piala Super UEFA (3x)','La Liga (2x)','Copa del Rey (2x)','Piala Super Spanyol (2x)']},
+
+      'ManUtd': { name: 'Manchester United', trophies: ['Liga Champions UEFA (1x)','Liga Primer Inggris (3x)','Piala Dunia Antarklub FIFA (1x)','Piala FA (1x)','Piala Liga Inggris (2x)','Community Shield (1x)']},
+
+      'Juventus': { name: 'Juventus', trophies: ['Serie A (2x)','Coppa Italia (1x)','Piala Super Italia (2x)']},
+
+      'Portugal': { name: 'Tim Nasional Portugal', trophies: ['Kejuaraan Eropa UEFA (Euro 2016)','Liga Negara UEFA (UEFA Nations League 2019)']},
+
+      'SportingCP': { name: 'Sporting CP', trophies: ['Piala Super Portugal (1x)']},
+
+      'AlNassr': { name: 'Al-Nassr', trophies: ['Arab Club Champions Cup (2023)']}
+
+    };
+
+
+
+    // Simple tab handling
+
+    function setActiveTab(id){
+
+      document.querySelectorAll('.tab-panel').forEach(el=>el.classList.add('hidden'));
+
+      document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('bg-red-600'));
+
+      const btn = document.getElementById('tab-'+id+'-btn');
+
+      if(btn) btn.classList.add('bg-red-600');
+
+      const panel = document.getElementById(id);
+
+      if(panel) panel.classList.remove('hidden');
+
+    }
+
+
+
+    document.getElementById('tab-bio-btn').addEventListener('click',()=>setActiveTab('bio'));
+
+    document.getElementById('tab-galeri-btn').addEventListener('click',()=>setActiveTab('galeri'));
+
+    document.getElementById('tab-rekor-btn').addEventListener('click',()=>setActiveTab('rekor'));
+
+
+
+    // Initial
+
+    setActiveTab('bio');
+
+
+
+    // Theme toggle (simple class flip for demonstration)
+
+    const themeBtn = document.getElementById('themeToggle');
+
+    themeBtn.addEventListener('click',()=>{
+
+      const el = document.documentElement;
+
+      if(el.hasAttribute('data-dark')){
+
+        el.removeAttribute('data-dark');
+
+        document.body.style.background = 'linear-gradient(180deg,#0f172a 0%, #071028 100%)';
+
+      } else {
+
+        el.setAttribute('data-dark','1');
+
+        document.body.style.background = 'linear-gradient(180deg,#05060a 0%, #000814 100%)';
+
+      }
+
+    });
+
+
+
+    /*
+
+      openTrophyPage(clubId)
+
+      - akan membuka tab baru (window.open) dan menulis halaman detail trofi
+
+      - menggunakan about:blank then document.write (kompatibel, lebih mudah)
+
+    */
+
+    function openTrophyPage(clubId) {
+  const data = trophyData[clubId];
+  if (!data) return;
+
+  const html = `
+  <!doctype html>
+  <html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trofi — ${data.name}</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Inter, system-ui;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #0a1124, #050814);
+        color: #e6eef8;
+      }
+
+      .card {
+        background: rgba(255,255,255,0.06);
+        padding: 32px;
+        border-radius: 22px;
+        width: 90%;
+        max-width: 780px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 25px 60px rgba(0,0,0,0.55);
+        border: 1px solid rgba(255,255,255,0.07);
+        animation: fade .6s ease;
+      }
+
+      @keyframes fade {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      h1 {
+        font-size: 32px;
+        font-weight: 900;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 15px;
+        color: #9fb0c9;
+        margin-bottom: 14px;
+      }
+
+      ul {
+        margin-top: 16px;
+        list-style: none;
+      }
+
+      li {
+        padding: 12px 16px;
+        background: rgba(255,255,255,0.04);
+        border-radius: 14px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid rgba(255,255,255,0.05);
+      }
+
+      .close {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #aabbd4;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <h1>Trofi Bersama ${data.name}</h1>
+      <p>Total: ${data.trophies.length} Gelar Resmi</p>
+
+      <ul>
+        ${data.trophies.map(t => `<li>🏆 ${t}</li>`).join('')}
+      </ul>
+
+      <div class="close">(Tutup tab untuk kembali)</div>
+    </div>
+  </body>
+  </html>
+  `;
+
+  const newWin = window.open('about:blank', '_blank');
+  if (newWin) {
+    newWin.document.write(html);
+    newWin.document.close();
+  } else {
+    alert("Pop-up diblokir. Izinkan pop-up untuk membuka halaman.");
+  }
+}
+
+    // Accessibility: keyboard support for trophy tiles
+
+    document.querySelectorAll('.trophy').forEach(el=>{
+
+      el.addEventListener('keydown',(e)=>{ if(e.key==='Enter'||e.key===' ') el.click(); });
+
+    });
+
+  </script>
+<script>
+(function(){
+  const slider = document.getElementById("awardSlider");
+  if(!slider) return;
+
+  let isAuto = true;
+  const cardGap = 18; // same as CSS gap
+  let autoInterval = 3000;
+  let scrolling = false;
+  let autoTimer;
+
+  // compute scroll amount: width of one item (current first child)
+  function cardWidth() {
+    const first = slider.querySelector('.award-item');
+    if(!first) return 260;
+    const style = getComputedStyle(first);
+    // flex-basis is used, use offsetWidth (includes gap visually via container)
+    return first.offsetWidth + cardGap;
+  }
+
+  // start auto sliding
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(() => {
+      slideNext();
+    }, autoInterval);
+  }
+  function stopAuto() {
+    if(autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+  }
+
+  // slide helpers
+  function slideNext() {
+    if(scrolling) return;
+    scrolling = true;
+    const w = cardWidth();
+    slider.scrollBy({ left: w, behavior: 'smooth' });
+    // after smooth scroll, allow next
+    setTimeout(() => {
+      // reset if passed half (we cloned items)
+     
+      scrolling = false;
+    }, 600);
+  }
+
+  function slidePrev() {
+    if(scrolling) return;
+    scrolling = true;
+    const w = cardWidth();
+    // if near start, jump ahead first to keep infinite illusion
+   
+    slider.scrollBy({ left: -w, behavior: 'smooth' });
+    setTimeout(()=>{ scrolling = false; }, 600);
+  }
+
+  // buttons
+  window.slideNext = slideNext;
+  window.slidePrev = slidePrev;
+
+  // pause on hover
+  slider.addEventListener('mouseenter', () => { stopAuto(); slider.classList.add('pause'); });
+  slider.addEventListener('mouseleave', () => { if(isAuto) startAuto(); slider.classList.remove('pause'); });
+
+  // pause when interacting with buttons
+  document.querySelectorAll('.slide-btn').forEach(b=>{
+    b.addEventListener('mouseenter', ()=> stopAuto());
+    b.addEventListener('mouseleave', ()=> { if(isAuto) startAuto(); });
+  });
+
+  // touch / swipe support
+  let sx = 0, dx = 0, isDown = false;
+  slider.addEventListener('pointerdown', (e)=>{
+    isDown = true;
+    stopAuto();
+    slider.setPointerCapture(e.pointerId);
+    sx = e.clientX;
+  });
+  slider.addEventListener('pointermove', (e)=>{
+    if(!isDown) return;
+    dx = e.clientX - sx;
+    slider.scrollLeft -= dx;
+    sx = e.clientX;
+  });
+  slider.addEventListener('pointerup', (e)=>{
+    isDown = false;
+    if(Math.abs(dx) > 40){
+      if(dx > 0) slidePrev(); else slideNext();
+    }
+    dx = 0;
+    if(isAuto) startAuto();
+  });
+  slider.addEventListener('pointercancel', ()=>{ isDown=false; if(isAuto) startAuto(); });
+
+  // initial position: small offset to avoid exact boundary
+  setTimeout(()=> {
+    // set to just after start so cloned items behind are available
+    slider.scrollLeft = 2;
+    if(isAuto) startAuto();
+  }, 100);
+
+  // responsive recalculation on resize
+  window.addEventListener('resize', () => {
+    // ensure seamless: if scroll passed half, reduce
+    if (slider.scrollLeft >= slider.scrollWidth / 2) {
+      slider.scrollLeft = slider.scrollLeft - (slider.scrollWidth / 2);
+    }
+  });
+
+})();
+</script>
+
+</body>
+
+</html>
